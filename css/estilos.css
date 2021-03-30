@@ -14,6 +14,7 @@ body{
     align-items:flex-start;
     justify-content: center;
     padding-left: 21px;
+    z-index: 1;
 }
 .topo p{
     color:#FFFFFF
@@ -59,6 +60,10 @@ body{
     justify-content: center;
     flex-direction: column;
     padding: 18px 14px;
+    /*border-style: inset;
+    border: solid 4px #32b72f;
+    position: relative;
+    z-index: 0;*/
 }
 .item img{
     width: 144px;
@@ -85,6 +90,22 @@ body{
     font-weight: bold;
     margin-bottom: 0px;
 }
+/*
+.certinho{
+    position: absolute;
+    z-index: 0;
+    border-radius: 50%;
+    width: 17px;
+    height: 17px;
+    background-color: #32b72f;
+    color: #FFFFFF;
+    font-size: 15px;
+    right: 14px;
+    bottom: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
 
 .fecharpedido{
     position: fixed;
@@ -96,15 +117,19 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
     }
 .fecharpedido div{
     width: 364px;
     height: 61px;
     border-radius: 50px;
     background-color: #CBCBCB;
+    /*background-color: #32B72F;*/
     border: none;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
+    /*font-weight: bold;*/
+    /*letter-spacing: 0.07em;*/
     color: #FFFFFF;
     white-space: pre-line;
     display: flex;
@@ -112,8 +137,68 @@ body{
     align-items: center;
     flex-direction: column;
 }
+/*
+.container_confirmar_pedido{
+    position:fixed;
+    width: 100%;
+    height: 100vw;
+    top:0;
+    left:0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba( 255, 255, 255, 0.85)
+   
+}
+.confirmar_pedido{
+    width: 377px;
+    height: 353px;
+    background-color: #50D074;
+    border-radius: 9px;
+    padding: 21px;
+}
+.confirmar_pedido p{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 31px;
+    }
 
+.confirma{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.confirma p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0,018em;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    font-weight: normal;
+    }
+.pode_pedir{
+    width: 329px;
+    height: 52px;
+    border-radius: 100px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 18px;
+   }
+.pode_pedir p{
+    color: #50D074;
+    margin: 0 auto;
+    letter-spacing: 0,018em;
+}*/
 /* fonte
 font-family: 'Righteous', cursive;
 font-family: 'Roboto', sans-serif;
+Comentários dentro do código para auxiliar quando usar o java script
 */
