@@ -26,6 +26,66 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
 }
+
+.prato{
+    margin-top: 123px;
+}
+
+.prato, .bebida, .sobremesa{
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    color: #333333;
+    padding-left: 19px;
+    margin-bottom: 30px;
+}
+.prato p, .bebida p, .sobremesa p{
+    margin-bottom: 17px;
+}
+.sobremesa{
+    margin-bottom: 122px;
+}
+.container_itens{
+    display: flex;
+    overflow:hidden;
+}
+.item{
+    width: 172px;
+    background-color: #FFFFFF;
+    margin-right: 16px;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 18px 14px;
+}
+.item img{
+    width: 144px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+}
+.nome_do_prato p:first-child{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+.nome_do_prato p:nth-child(2){
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #A6A6A6;
+    margin-bottom: 7px;
+}
+.nome_do_prato p:last-child{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
 .fecharpedido{
     position: fixed;
     bottom: 0;
@@ -53,44 +113,6 @@ body{
     flex-direction: column;
 }
 
-.prato{
-    margin-top: 123px;
-}
-
-.prato, .bebida, .sobremesa{
-    font-family: 'Righteous', cursive;
-    font-size: 26px;
-    color: #333333;
-    padding-left: 19px;
-    margin-bottom: 30px;
-}
-.container_itens{
-    display: flex;
-    overflow:hidden;
-}
-.item{
-    width: 172px;
-    height: 216px;
-    background-color: #FFFFFF;
-    margin-right: 16px;
-    border-radius: 9px;
-    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-.item img{
-    width: 144px;
-    border-radius: 4px;
-    margin:18px 14px;
-}
-.nome_do_prato{
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    color: #333333;
-    font-weight: bold;
-}
 /* fonte
 font-family: 'Righteous', cursive;
 font-family: 'Roboto', sans-serif;
