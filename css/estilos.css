@@ -47,7 +47,7 @@ body{
 }
 .container_itens{
     display: flex;
-    overflow:hidden;
+    overflow-x: scroll
 }
 .item{
     width: 172px;
@@ -66,6 +66,10 @@ body{
 .bordaverde{
     border-style: inset;
     border: solid 4px #32b72f;
+    padding: 14px 10px;
+}
+.fuiselecionadoprato, .fuiselecionadosobremesa, .fuiselecionadobebida{
+    position: absolute;
 }
 .item img{
     width: 144px;
@@ -94,7 +98,6 @@ body{
 }
 
 .certinho{
-    position: absolute;
     z-index: 0;
     border-radius: 50%;
     width: 17px;
@@ -142,7 +145,7 @@ body{
     align-items: center;
     flex-direction: column;
 }
-.fecharpedido2 div{
+.fecharpedidoverde div{
     width: 364px;
     height: 61px;
     border-radius: 50px;
@@ -159,7 +162,7 @@ body{
     align-items: center;
     flex-direction: column;
 }
-/*
+
 .container_confirmar_pedido{
     position:fixed;
     width: 100%;
@@ -167,11 +170,12 @@ body{
     top:0;
     left:0;
     z-index: 2;
+    background-color: rgba( 255, 255, 255, 0.85);
+   }
+.display_confirmar_pedido{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba( 255, 255, 255, 0.85)
-   
 }
 .confirmar_pedido{
     width: 377px;
@@ -218,7 +222,7 @@ body{
     color: #50D074;
     margin: 0 auto;
     letter-spacing: 0,018em;
-}*/
+}
 /* fonte
 font-family: 'Righteous', cursive;
 font-family: 'Roboto', sans-serif;
