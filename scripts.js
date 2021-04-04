@@ -26,6 +26,7 @@ function item_selecionado_prato(itemselecionado, nome_do_item, valor_do_prato) {
     const certo_prato = document.querySelector(certinho);
     certo_prato.classList.remove('escondido');
     certo_prato.classList.add('fuiselecionadoprato');
+    todas_as_opcoes_selecionadas()
 }
 
 function item_selecionado_bebida(itemselecionado, nome_do_item, valor_da_bebida) {
@@ -44,6 +45,7 @@ function item_selecionado_bebida(itemselecionado, nome_do_item, valor_da_bebida)
     const certo_bebida = document.querySelector(certinho);
     certo_bebida.classList.remove('escondido');
     certo_bebida.classList.add('fuiselecionadobebida');
+    todas_as_opcoes_selecionadas()
 }
 
 function item_selecionado_sobremesa(itemselecionado, nome_do_item, valor_da_sobremesa) {
@@ -62,14 +64,18 @@ function item_selecionado_sobremesa(itemselecionado, nome_do_item, valor_da_sobr
     const certo_sobremesa = document.querySelector(certinho);
     certo_sobremesa.classList.remove('escondido');
     certo_sobremesa.classList.add('fuiselecionadosobremesa');
+    todas_as_opcoes_selecionadas()
 }
-function todas_as_opcoes_selecionadas(prato_selecionado, bebida_selecionada,sobremesa_selecionada) {
-    if (prato_selecionado !== null && bebida_selecionada !== null && sobremesa_selecionada !== null) {
-    alert ("fechar pedido");
+function todas_as_opcoes_selecionadas() {
+    if (prato_selecionado != null && bebida_selecionada != null && sobremesa_selecionada != null) {
     const elemento = document.querySelector(".fecharpedido");
-    elemento.classList.add("fecharpedidoverde");
-    const texto = document.querySelector(".paragrafo");
-    texto.innerHTML = "Fechar pedido"  
+    const completar_pedido = document.querySelector('.fecharpedidoverde');
+
+    elemento.classList.remove ('fecharpedidodisplay');
+    elemento.classList.add('escondido');
+
+    completar_pedido.classList.remove ('escondido'); 
+    completar_pedido.classList.add ('fecharpedidodisplay')
     }
 }
 function fechar_pedido(){
@@ -100,6 +106,12 @@ function fechar_pedido(){
     let valor_arredondado = parseFloat(valor_total_dos_itens.toFixed(2));
     valor_total.innerHTML = "R$" + valor_arredondado + "0";
     valor_total_do_pedido = valor_total;
+}
+
+function cancelar () {
+    let cancela = document.querySelector('.container_confirmar_pedido');
+    cancela.classList.remove('display_confirmar_pedido');
+    cancela.classList.add('escondido');
 }
 //function whatsapp (){
 //    replace(/['()]/g, escape). 

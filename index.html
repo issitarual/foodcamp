@@ -151,12 +151,21 @@
 
 
     <div class="inferior">
-        <div onclick="fechar_pedido()" class="fecharpedido">
-            <div class="paragrafo">
+        <div class="fecharpedido fecharpedidodisplay">
+               <div class="paragrafo">
                <p>Selecione os 3 itens </p><p>para fechar o pedido</p> 
             </div>
-        </div>
+        </div>   
+        <div onclick="fechar_pedido()" class="fecharpedidoverde fecharpedido escondido">
+            <div class="paragrafo">
+               <p>Fechar Pedido</p> 
+            </div>
+        </div>  
     </div>
+
+    
+           
+    
     
     <div class="container_confirmar_pedido escondido">
     <div class="confirmar_pedido">
@@ -182,8 +191,8 @@
                 <p>Tudo certo, pode pedir!</p>
              </a>
         </div>
-        <p>Cancelar</p>
-    </div>
+            <p onclick="cancelar()">Cancelar</p>
+        </div>
     </div>
     <script src="scripts.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
