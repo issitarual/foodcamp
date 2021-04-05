@@ -134,12 +134,9 @@ body{
     height: 61px;
     border-radius: 50px;
     background-color: #CBCBCB;
-    /*background-color: #32B72F;*/
     border: none;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    /*font-weight: bold;*/
-    /*letter-spacing: 0.07em;*/
     color: #FFFFFF;
     white-space: pre-line;
  }
@@ -166,7 +163,7 @@ body{
 .container_confirmar_pedido{
     position:fixed;
     width: 100%;
-    height: 100vw;
+    height: 100%;
     top:0;
     left:0;
     z-index: 2;
@@ -184,7 +181,7 @@ body{
     border-radius: 9px;
     padding: 21px;
 }
-.confirmar_pedido p{
+.confirmar_pedido>p{
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 22px;
@@ -202,11 +199,13 @@ body{
 .confirma p{
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
-    letter-spacing: 0,018em;
+    letter-spacing: 0,04em;
     color: #FFFFFF;
     margin-bottom: 16px;
-    font-weight: normal;
     }
+.valor_total_do_pedido{
+    font-weight: bold;
+}
 .pode_pedir{
     width: 329px;
     height: 52px;
@@ -221,8 +220,12 @@ body{
 .pode_pedir p{
     color: #50D074;
     margin: 0 auto;
-    letter-spacing: 0,018em;
+    letter-spacing: 0,04em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
 }
+
 /* fonte
 font-family: 'Righteous', cursive;
 font-family: 'Roboto', sans-serif;

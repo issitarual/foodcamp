@@ -89,22 +89,22 @@ function fechar_pedido(){
     const prato_confirmar = document.querySelector(".prato_confirmar_pedido");
     prato_confirmar.innerHTML = prato_selecionado;
     const valor_prato_confirmar = document.querySelector(".valor_prato_confirmar_pedido");
-    valor_prato_confirmar.innerHTML = "R$"+valor_prato_selecionado;
+    valor_prato_confirmar.innerHTML = "R$ "+valor_prato_selecionado;
 
     const bebida_confirmar = document.querySelector(".bebida_confirmar_pedido");
     bebida_confirmar.innerHTML = bebida_selecionada;
     const valor_bebida_confirmar = document.querySelector(".valor_bebida_confirmar_pedido");
-    valor_bebida_confirmar.innerHTML = "R$" + valor_bebida_selecionada;
+    valor_bebida_confirmar.innerHTML = "R$ " + valor_bebida_selecionada;
 
     const sobremesa_confirmar = document.querySelector(".sobremesa_confirmar_pedido");
     sobremesa_confirmar.innerHTML = sobremesa_selecionada;
     const valor_sobremesa_confirmar = document.querySelector(".valor_sobremesa_confirmar_pedido");
-    valor_sobremesa_confirmar.innerHTML = "R$" + valor_sobremesa_selecionada;
+    valor_sobremesa_confirmar.innerHTML = "R$ " + valor_sobremesa_selecionada;
 
     const valor_total = document.querySelector(".valor_total_do_pedido");
     let valor_total_dos_itens = parseFloat (valor_prato_selecionado.replace(',','.')) + parseFloat(valor_bebida_selecionada.replace(',','.')) + parseFloat(valor_sobremesa_selecionada.replace(',','.'));
     let valor_arredondado = parseFloat(valor_total_dos_itens.toFixed(2));
-    valor_total.innerHTML = "R$" + valor_arredondado + "0";
+    valor_total.innerHTML = "R$ " + valor_arredondado + "0";
     valor_total_do_pedido = valor_total;
 }
 
@@ -113,19 +113,18 @@ function cancelar () {
     cancela.classList.remove('display_confirmar_pedido');
     cancela.classList.add('escondido');
 }
-//function whatsapp (){
-//    replace(/['()]/g, escape). 
-//    replace(/\*/g, '%2A').
-//    replace(/%(?:7C|60|5E)/g, unescape);
-//    let texto_whatsapp_saudacao = "Olá, gostaria de fazer o pedido:";
-//    let texto_whatsapp_prato = "- Prato: " + prato_selecionado;
-//    let texto_whatsapp_bebida = "- Bebida: " + bebida_selecionada;
-//    let texto_whatsapp_sobremesa = "- Sobremesa: " + sobremesa_selecionada;
-//    let texto_whatsapp_valor_total = "Total: R$ " + valor_total_do_pedido;
-//    let texto_whatsapp_nome = "Nome: " + nome;
-//    let texto_whatsapp_endereco = "Endereço: " +endereco;
-//    texto_whatsapp = texto_whatsapp_saudacao + texto_whatsapp_prato + texto_whatsapp_bebida + texto_whatsapp_sobremesa + texto_whatsapp_valor_total + texto_whatsapp_nome + texto_whatsapp_endereco;
-//    return encodeURIComponent(texto_whatsapp);
-//}
+function whatsapp (){
+    let texto_whatsapp_saudacao = "Olá, gostaria de fazer o pedido:";
+    let texto_whatsapp_prato = "- Prato: " + prato_selecionado;
+    let texto_whatsapp_bebida = "- Bebida: " + bebida_selecionada;
+    let texto_whatsapp_sobremesa = "- Sobremesa: " + sobremesa_selecionada;
+    let texto_whatsapp_valor_total = "Total: R$ " + valor_total_do_pedido;
+    let texto_whatsapp_nome = "Nome: " + nome;
+    let texto_whatsapp_endereco = "Endereço: " + endereco;
+    texto_whatsapp = texto_whatsapp_saudacao  + texto_whatsapp_prato + texto_whatsapp_bebida + texto_whatsapp_sobremesa + texto_whatsapp_valor_total + texto_whatsapp_nome + texto_whatsapp_endereco;
+    const texto = encodeURI(texto_whatsapp);
+    const site = "https://wa.me/5521969217949?text=" + texto;
+    window.location.href = site;
+}
 
 
