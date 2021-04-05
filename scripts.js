@@ -79,8 +79,10 @@ function todas_as_opcoes_selecionadas() {
     }
 }
 function fechar_pedido(){
-    const nome = prompt('Qual o seu nome?');
-    const endereco = prompt('Qual o seu endereço?');
+    let nome_pedido = prompt('Qual o seu nome?');
+    let endereco_pedido = prompt('Qual o seu endereço?');
+    nome = "" + nome_pedido;
+    endereco = "" + endereco_pedido;
      
     const confirma =document.querySelector('.container_confirmar_pedido');
     confirma.classList.remove('escondido');
@@ -101,11 +103,11 @@ function fechar_pedido(){
     const valor_sobremesa_confirmar = document.querySelector(".valor_sobremesa_confirmar_pedido");
     valor_sobremesa_confirmar.innerHTML = "R$ " + valor_sobremesa_selecionada;
 
-    const valor_total = document.querySelector(".valor_total_do_pedido");
+    let valor_total = document.querySelector(".valor_total_do_pedido");
     let valor_total_dos_itens = parseFloat (valor_prato_selecionado.replace(',','.')) + parseFloat(valor_bebida_selecionada.replace(',','.')) + parseFloat(valor_sobremesa_selecionada.replace(',','.'));
     let valor_arredondado = parseFloat(valor_total_dos_itens.toFixed(2));
     valor_total.innerHTML = "R$ " + valor_arredondado + "0";
-    valor_total_do_pedido = valor_total;
+    valor_total_do_pedido = valor_arredondado;
 }
 
 function cancelar () {
@@ -114,16 +116,16 @@ function cancelar () {
     cancela.classList.add('escondido');
 }
 function whatsapp (){
-    let texto_whatsapp_saudacao = "Olá, gostaria de fazer o pedido:";
-    let texto_whatsapp_prato = "- Prato: " + prato_selecionado;
-    let texto_whatsapp_bebida = "- Bebida: " + bebida_selecionada;
-    let texto_whatsapp_sobremesa = "- Sobremesa: " + sobremesa_selecionada;
-    let texto_whatsapp_valor_total = "Total: R$ " + valor_total_do_pedido;
-    let texto_whatsapp_nome = "Nome: " + nome;
-    let texto_whatsapp_endereco = "Endereço: " + endereco;
+    let texto_whatsapp_saudacao = "Olá, gostaria de fazer o pedido: ";
+    let texto_whatsapp_prato = " \n - Prato: " + prato_selecionado;
+    let texto_whatsapp_bebida = " \n- Bebida: " + bebida_selecionada;
+    let texto_whatsapp_sobremesa = " \n- Sobremesa: " + sobremesa_selecionada;
+    let texto_whatsapp_valor_total = " \nTotal: R$ " +  valor_total_do_pedido + "0";
+    let texto_whatsapp_nome = " \n\nNome: " + nome;
+    let texto_whatsapp_endereco = " \nEndereço: " + endereco;
     texto_whatsapp = texto_whatsapp_saudacao  + texto_whatsapp_prato + texto_whatsapp_bebida + texto_whatsapp_sobremesa + texto_whatsapp_valor_total + texto_whatsapp_nome + texto_whatsapp_endereco;
-    const texto = encodeURI(texto_whatsapp);
-    const site = "https://wa.me/5521969217949?text=" + texto;
+    let texto = encodeURI(texto_whatsapp);
+    let site = "https://wa.me/5521969217949?text=" + texto;
     window.location.href = site;
 }
 
